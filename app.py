@@ -58,7 +58,7 @@ with st.sidebar:
     st.markdown('---')
     page = st.radio(
         "Go to",
-        ["Home", "Check a Transaction", "About", "Contact"],
+        ["Home", "Check a Transaction", "About","How It Works", "Contact"],
         key="sidebar-radio"
     )
     st.markdown('---')
@@ -69,6 +69,7 @@ pages = {
     "Check a Transaction": ("Check", "show_check"),
     "About": ("2_About", "show_about"),
     "Contact": ("3_Contact", "show_contact"),
+    "How It Works": ("HowItWorks", "show_how_it_works"),
 }
 
 module_name, func_name = pages[page]
