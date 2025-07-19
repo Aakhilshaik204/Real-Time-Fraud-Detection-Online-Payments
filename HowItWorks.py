@@ -28,8 +28,17 @@ def show_how_it_works():
         <div class='how-section'>
         Our Online Fraud Detection System uses a two-stage AI approach to analyze your transaction:
         <ol>
-            <li class='how-step'><b>Risk Score Calculation:</b> The system first evaluates your transaction details (such as amount, type, and other features) to generate a risk score. This score reflects the likelihood of the transaction being suspicious based on patterns learned from historical data.</li>
-            <li class='how-step'><b>Fraud Prediction:</b> Using the risk score and other transaction features, a second AI model predicts whether the transaction is likely to be <b>legitimate</b> or <b>fraudulent</b>. This model is trained on real-world fraud data for high accuracy.</li>
+            <li class='how-step'><b>Risk Score Calculation:</b> The system first evaluates your transaction details to generate a risk score. <br><br>
+                <b>Features used for risk score:</b>
+                <ul>
+                    <li><b>Transaction Amount:</b> The value of the transaction.</li>
+                    <li><b>Previous Fraudulent Activity:</b> Whether you have a history of fraud (Yes/No).</li>
+                    <li><b>Failed Transaction Count (7d):</b> Number of failed transactions in the last 7 days.</li>
+                    <li><b>Daily Transaction Count:</b> Number of transactions made today.</li>
+                </ul>
+                These features are processed by a machine learning model trained on historical data to output a <b>risk score</b> (higher means more suspicious).
+            </li>
+            <li class='how-step'><b>Fraud Prediction:</b> Using the risk score and the same transaction features, a second AI model predicts whether the transaction is likely to be <b>legitimate</b> or <b>fraudulent</b>. This model is trained on real-world fraud data for high accuracy.</li>
         </ol>
         <b>What happens when you check a transaction?</b><br>
         <ul>
